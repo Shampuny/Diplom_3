@@ -10,7 +10,7 @@ public class MainPage {
     private final By enterInAccountButton = By.xpath(".//button[text()='Войти в аккаунт']");
     private final By constructorButton = By.xpath(".//p[text()='Конструктор']");
     private final By constructBurgerHeader = By.xpath(".//h1[text()='Соберите бургер']");
-    private final By logoStellarBurgers = By.xpath(".//div/header/nav/div/a");
+    private final By logoStellarBurgers = By.xpath(".//div[@class='AppHeader_header__logo__2D0X2']/a");
     private final By bunsTab = By.xpath(".//span[text()='Булки']");
     private final By saucesTab = By.xpath(".//span[text()='Соусы']");
     private final By ingredientsTab = By.xpath(".//span[text()='Начинки']");
