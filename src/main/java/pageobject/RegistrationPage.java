@@ -49,7 +49,7 @@ public class RegistrationPage {
         driver.findElement(signInButton).click();
     }
     @Step("Получить текст ошибки Некорректный пароль")
-    public By getIncorrectPassword() {
-        return incorrectPassword;
+    public boolean checkIncorrectPassword() {
+        return driver.findElement(incorrectPassword).isDisplayed();
     }
 }

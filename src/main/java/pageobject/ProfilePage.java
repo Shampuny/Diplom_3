@@ -14,9 +14,9 @@ public class ProfilePage {
         this.driver = driver;
     }
 
-    @Step("Вернуть заголовок Имя")
-    public By getNameField() {
-        return nameField;
+    @Step("Получить заголовок Имя")
+    public boolean checkNameField() {
+        return driver.findElement(nameField).isDisplayed();
     }
 
     @Step("Выход из профиля")

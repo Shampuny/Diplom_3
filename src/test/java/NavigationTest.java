@@ -22,7 +22,7 @@ public class NavigationTest extends BaseTest {
         loginPage.login(getEmail(), getPassword());
         mainPage.clickOnButtonPersonalAccount();
         ProfilePage profilePage = new ProfilePage(getDriver());
-        Assert.assertTrue(getDriver().findElement(profilePage.getNameField()).isDisplayed());
+        Assert.assertTrue(profilePage.checkNameField());
     }
 
     @Test
@@ -34,7 +34,7 @@ public class NavigationTest extends BaseTest {
         LoginPage loginPage = new LoginPage(getDriver());
         loginPage.login(getEmail(), getPassword());
         mainPage.clickOnConstructorButton();
-        Assert.assertTrue(getDriver().findElement(mainPage.getConstructBurgerHeader()).isDisplayed());
+        Assert.assertTrue(mainPage.checkConstructBurgerHeader());
     }
 
     @Test
@@ -47,7 +47,7 @@ public class NavigationTest extends BaseTest {
         loginPage.login(getEmail(), getPassword());
         mainPage.clickOnButtonPersonalAccount();
         mainPage.clickOnLogoStellarBurgers();
-        Assert.assertTrue(getDriver().findElement(mainPage.getConstructBurgerHeader()).isDisplayed());
+        Assert.assertTrue(mainPage.checkConstructBurgerHeader());
     }
     @Test
     @DisplayName("Работа перехода на вкладку «Булки»")

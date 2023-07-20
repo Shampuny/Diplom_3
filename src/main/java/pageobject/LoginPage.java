@@ -46,7 +46,7 @@ public class LoginPage {
         clickOnEnterButton();
     }
     @Step("Получить заголовок Вход")
-    public By getEnterHeader(){
-        return enterHeader;
+    public boolean checkEnterHeader(){
+        return driver.findElement(enterHeader).isDisplayed();
     }
 }

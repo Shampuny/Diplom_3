@@ -15,7 +15,7 @@ public class RegistrationTest extends BaseTest{
         loginPage.clickOnRegistrationLink();
         RegistrationPage registrationPage = new RegistrationPage(getDriver());
         registrationPage.registrationNewUser(getName(), getEmail(), getPassword());
-        Assert.assertTrue(getDriver().findElement(loginPage.getEnterHeader()).isDisplayed());
+        Assert.assertTrue(loginPage.checkEnterHeader());
     }
     @Test
     @DisplayName("Получение ошибки при вводе некорректного пароля")
@@ -27,6 +27,6 @@ public class RegistrationTest extends BaseTest{
         loginPage.clickOnRegistrationLink();
         RegistrationPage registrationPage = new RegistrationPage(getDriver());
         registrationPage.registrationNewUser(getName(), getEmail(), getIncorrectPassword());
-        Assert.assertTrue(getDriver().findElement(registrationPage.getIncorrectPassword()).isDisplayed());
+        Assert.assertTrue(registrationPage.checkIncorrectPassword());
     }
 }

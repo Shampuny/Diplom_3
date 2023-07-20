@@ -21,7 +21,7 @@ public class LoginTest extends BaseTest {
         loginPage.login(getEmail(), getPassword());
         mainPage.clickOnButtonPersonalAccount();
         ProfilePage profilePage = new ProfilePage(getDriver());
-        Assert.assertTrue(getDriver().findElement(profilePage.getNameField()).isDisplayed());
+        Assert.assertTrue(profilePage.checkNameField());
     }
     @Test
     @DisplayName("Вход по кнопке «Личный кабинет»")
@@ -33,7 +33,7 @@ public class LoginTest extends BaseTest {
         loginPage.login(getEmail(), getPassword());
         mainPage.clickOnButtonPersonalAccount();
         ProfilePage profilePage = new ProfilePage(getDriver());
-        Assert.assertTrue(getDriver().findElement(profilePage.getNameField()).isDisplayed());
+        Assert.assertTrue(profilePage.checkNameField());
     }
     @Test
     @DisplayName("Вход по кнопке на форме регистрации")
@@ -48,7 +48,7 @@ public class LoginTest extends BaseTest {
         loginPage.login(getEmail(), getPassword());
         mainPage.clickOnButtonPersonalAccount();
         ProfilePage profilePage = new ProfilePage(getDriver());
-        Assert.assertTrue(getDriver().findElement(profilePage.getNameField()).isDisplayed());
+        Assert.assertTrue(profilePage.checkNameField());
     }
 
     @Test
@@ -64,7 +64,7 @@ public class LoginTest extends BaseTest {
         loginPage.login(getEmail(), getPassword());
         mainPage.clickOnButtonPersonalAccount();
         ProfilePage profilePage = new ProfilePage(getDriver());
-        Assert.assertTrue(getDriver().findElement(profilePage.getNameField()).isDisplayed());
+        Assert.assertTrue(profilePage.checkNameField());
     }
 
     @Test
@@ -78,6 +78,6 @@ public class LoginTest extends BaseTest {
         mainPage.clickOnButtonPersonalAccount();
         ProfilePage profilePage = new ProfilePage(getDriver());
         profilePage.clickOnExitButton();
-        Assert.assertTrue(getDriver().findElement(loginPage.getEnterHeader()).isDisplayed());
+        Assert.assertTrue(loginPage.checkEnterHeader());
     }
 }

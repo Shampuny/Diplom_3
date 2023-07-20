@@ -52,7 +52,7 @@ public class MainPage {
         return driver.findElement(chosenElement).getText();
     }
     @Step("Получение заголовка Соберите бургер")
-    public By getConstructBurgerHeader() {
-        return constructBurgerHeader;
+    public boolean checkConstructBurgerHeader() {
+        return driver.findElement(constructBurgerHeader).isDisplayed();
     }
 }
